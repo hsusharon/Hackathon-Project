@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>todayWeather</title>
+	<script type="text/javascript" src="{{url_for('static',filename='js/time.js')}}"></script>
+</head>
+<body>
+	<script>
+		var i,weather={{ todayList | tojson }};
+		var country=54;
+		var info=weatherInfo(weather,country,2);
+		document.write("位址 : "+weather[country]+"<br>最高溫 : "+info[0]+"<br>最低溫 : "+info[1]+"<br>下雨機率 : "+info[2]+"<br>"+info[3]+"<br>舒適度 : "+info[4]+"<br>");
+		/*
+	for(i=0;i<weather.length;i++)
+			document.write(i+" "+weather[i]+"<br>");
+		*/
+	</script>
+</body>
+</html>

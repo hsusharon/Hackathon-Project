@@ -1,0 +1,32 @@
+0 嘉義縣
+54 新北市
+108 嘉義市
+162 新竹縣
+216 新竹市
+270 臺北市
+324 臺南市
+378 宜蘭縣
+432 苗栗縣
+486 雲林縣
+540 花蓮縣
+594 臺中市
+648 臺東縣
+702 桃園市
+756 南投縣
+810 高雄市
+864 金門縣
+918 屏東縣
+972 基隆市
+1026 澎湖縣
+1080 彰化縣
+1134 連江縣
+
+Description:(mod 54)
+0 country
+2~13 weather phen(start/end/phe/value)
+15~23 prob of rain(start/end/prob)
+25~33 MinT(start/end/temp)
+35~43 CI(start/end/feel)
+45~53 MaxT(start/end/temp)
+
+update 6hr/times

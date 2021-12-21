@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首頁</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/country.css')}}">
+</head>
+<body>
+
+	<div id="headline" style='text-align: center;'>
+		<h1>Find the place you want to go</h1>
+	</div>
+
+	<div id="question">	
+		<h1>Which city do you want to go?</h1>
+	</div>
+
+
+	<div id="selection">
+		<form action="" method="POST" id="options">
+			<select id="select1" name='area'>
+				<option value="台北">Taipei</option>
+				<option value="新北">New Taipei</option>
+				<option value="桃園">Taoyuan</option>
+				<option value="新竹">Hsinchu</option>
+				<option value="苗栗">Miaoli</option>
+				<option value="台中">taichung</option>
+				<option value="彰化">Changhua</option>
+				<option value="南投">Nantou</option>
+				<option value="雲林">Yunlin</option>
+				<option value="嘉義">Chiayi</option>
+				<option value="台南">tainan</option>
+				<option value="高雄">Kaohsiung</option>
+				<option value="屏東">Pingtung</option>
+				<option value="宜蘭">Yilan</option>
+				<option value="花蓮">Hualien</option>
+				<option value="臺東">Taitung</option>
+				<option value="澎湖">Penghu</option>
+			</select>
+      <input type="submit" name="submit" id="submit"></input>
+		</form>
+	</div>
+
+</body>
+</html>

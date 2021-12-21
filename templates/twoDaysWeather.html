@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>twoDaysWeather</title>
+</head>
+<body>
+	<div>
+		<script>
+			var i,test={{ twoDaysList | tojson }};
+			var today = new Date();
+			var now = today.getFullYear()+'-'+(today.getMonth() < 10 ? '0' : '')+(today.getMonth()+1)+'-'+(today.getDate() < 10 ? '0' : '')+today.getDate()+" "+(today.getHours() < 10 ? '0' : '')+today.getHours() + ":" +(today.getMinutes() < 10 ? '0' : '')+ today.getMinutes() + ":" +(today.getSeconds() < 10 ? '0' : '')+ today.getSeconds();
+			document.write(now+"<br>");
+			for(i=0;i<test.length;i++)
+				document.write(i+" "+test[i]+"<br>");
+		</script>
+	</div>
+
+</body>
+</html>

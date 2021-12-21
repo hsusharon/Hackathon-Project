@@ -1,0 +1,41 @@
+0 雲林縣
+808 南投縣
+1616 連江縣
+2424 臺東縣
+3232 金門縣
+4040 宜蘭縣
+4848 屏東縣
+5656 苗栗縣
+6464 澎湖縣
+7272 臺北市
+8080 新竹縣
+8888 花蓮縣
+9696 高雄市
+10504 彰化縣
+11312 新竹市
+12120 新北市
+12928 基隆市
+13736 台中市
+14544 台南市
+15352 桃園市
+16160 嘉義縣
+16968 嘉義市
+
+Description:
+0 country
+1 geocode
+2 latitude
+3 longitude
+5~28 	12hr prob of rain(startTime/endTime/prob/%)
+30~125 	3hr weather phenomanence(startTime/endTime/phen/some value)
+127~198 3hr body felt temperature(time/temperature/C)
+200~271 3hr temperatrue(time/temp/C)
+273~344 3hr relative humidity(time/value/%)
+346~417 3hr convenience index(time/someValue/description)
+420~491 3hr weather description(startTime/endTime/description)
+494~537 6hr prob of rain(startTime/endTime/value/%)
+540~659 3hr wind speed(time/speed/m\s/level/unit)
+662~733 3hr wind direction(time/direction/unit)
+736~807 3hr dew point temp(time/temp/C)
+
+update 6hr/times

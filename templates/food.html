@@ -1,0 +1,201 @@
+<html>
+
+<head><title></title>
+
+	<script
+		src="https://code.jquery.com/jquery-1.11.3.js"
+		integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0="
+		crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/food.css')}}">
+</head>
+<body>
+	<center>
+	<div class='restaurant' id='restaurant111'>
+    <h1>Special restuarants</h1>
+    <ul>
+			<div class='restaurant' id='ind' >
+      	<li><b>India Food</b>
+        	<ul id='indlist'>
+
+        	</ul>
+				</li>
+			</div>
+			<div class='restaurant' id='mus'>
+  			<li><b>Muslin food</b>
+        	<ul id='muslist'>
+
+        	</ul>
+				</li>
+			</div>
+			<div class='restaurant' id='veg'>
+				<li><b>Vegetarian</b>
+        	<ul id='veglist'>
+
+        	</ul>
+      	</li>
+			</div>
+		</ul>
+  	</div>
+  </center>
+  <script>
+	function appendind(){
+		var node = document.createElement("LI");
+		var textnode = document.createTextNode(ind[x-1]);
+		node.appendChild(textnode);
+		document.getElementById("indlist").appendChild(node);
+	}
+	function appendmus(){
+		var node = document.createElement("LI");
+		var textnode = document.createTextNode(mus[x-1]);
+		node.appendChild(textnode);
+		document.getElementById("muslist").appendChild(node);
+	}
+	function appendveg(){
+		var node = document.createElement("LI");
+		var textnode = document.createTextNode(veg[x-1]);
+		node.appendChild(textnode);
+		document.getElementById("veglist").appendChild(node);
+	}
+	var ind = {{ ind | tojson }}
+	console.log(ind)
+	var mus = {{ mus | tojson }}
+	console.log(mus)
+	var veg = {{ veg | tojson }}
+	console.log(veg)
+
+	if({{ target | tojson }}=='台北'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[1]){
+				appendind();
+			}
+		}
+
+		for(x=0;x<mus.length;x++){
+			if(mus[x] == mus[1]){
+				appendmus();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "台北市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='宜蘭'){
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "宜蘭縣"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='新北'){
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "新北市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='桃園'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[59]){
+				console.log(ind[x])
+				appendind();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "桃園市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='新竹'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[65]){
+				appendind();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "新竹市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='苗栗'){
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "苗栗縣"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='台中'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[71]){
+				appendind();
+			}
+		}
+		for(x=0;x<mus.length;x++){
+			if(mus[x] == mus[3]){
+				appendmus();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "台中市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='台南'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[81]){
+				appendind();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "台南市"){
+				appendveg();
+			}
+		}
+	}
+
+	if({{ target | tojson }}=='高雄'){
+		for(x=0;x<ind.length;x++){
+			if(ind[x] == ind[85]){
+				appendind();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "高雄市"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='花蓮'){
+		for(x=0;x<mus.length;x++){
+			if(ind[x] == ind[5]){
+				appendmus();
+			}
+		}
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == "花蓮縣"){
+				appendveg();
+			}
+		}
+	}
+	if({{ target | tojson }}=='南投'){
+		for(x=0;x<veg.length;x++){
+			if(veg[x] == " 南投"){
+				appendveg();
+			}
+		}
+	}
+
+    $(document).ready(function(){
+			$('#korlist').slideDown(300);
+			$('#veglist').slideDown(300);
+			$('#muslist').slideDown(300);
+			$('#indlist').slideDown(300);
+    });
+  </script>
+</body>
+
+</html>
